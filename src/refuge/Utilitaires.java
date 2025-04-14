@@ -91,7 +91,7 @@ public class Utilitaires {
     public static void afficherCliniques(ArrayList<CliniqueVeterinaire> cliniques) {
         System.out.println("\nCliniques vétérinaires disponibles :");
         for (CliniqueVeterinaire c : cliniques) {
-            System.out.println(c);
+            System.out.println(c.getNomClinique() + " - " + c.getTypeDeSoin());
         }
     }
 
