@@ -6,5 +6,4 @@ public enum TypeDeSoin {
     CONSULTATION_GENERALE,
     URGENCE,
     CHIRURGIE
-
 }

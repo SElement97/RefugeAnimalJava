@@ -1,11 +1,13 @@
 package refuge;
 
 public class Chat extends Animal {
+
     private String typePelage;
     private boolean sterilise;
     private String comportement;
 
-    // Constructeur par défaut
+    // Constructeurs
+
     public Chat() {
         super();
         typePelage = "";
@@ -13,21 +15,43 @@ public class Chat extends Animal {
         comportement = "";
     }
 
-    // Constructeur avec paramètres
-    public Chat(String unNom, int unAge, String unEtatSante, String unTypePelage, boolean estSterilise, String unComportement) {
-        super(unNom, "refuge.Chat", unAge, unEtatSante);
+    public Chat(String unNom, int unAge, String unEtatSante,
+                String unTypePelage, boolean estSterilise, String unComportement) {
+        super(unNom, "Chat", unAge, unEtatSante);
         typePelage = unTypePelage;
         sterilise = estSterilise;
         comportement = unComportement;
     }
 
-    public String getTypePelage() { return typePelage; }
-    public boolean isSterilise() { return sterilise; }
-    public String getComportement() { return comportement; }
+    // Getters
 
-    public void setTypePelage(String unTypePelage) { typePelage = unTypePelage; }
-    public void setSterilise(boolean estSterilise) { sterilise = estSterilise; }
-    public void setComportement(String unComportement) { comportement = unComportement; }
+    public String getTypePelage() {
+        return typePelage;
+    }
+
+    public boolean isSterilise() {
+        return sterilise;
+    }
+
+    public String getComportement() {
+        return comportement;
+    }
+
+    // Setters
+
+    public void setTypePelage(String unTypePelage) {
+        typePelage = unTypePelage;
+    }
+
+    public void setSterilise(boolean estSterilise) {
+        sterilise = estSterilise;
+    }
+
+    public void setComportement(String unComportement) {
+        comportement = unComportement;
+    }
+
+    // toString
 
     @Override
     public String toString() {
@@ -36,6 +60,4 @@ public class Chat extends Animal {
                 "Stérilisé : " + (sterilise ? "Oui" : "Non") + "\n" +
                 "Comportement : " + comportement;
     }
-
 }
-
